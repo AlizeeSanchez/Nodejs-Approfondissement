@@ -1,5 +1,7 @@
-1_  Initialiser docker mongoDB dans docker-compose.yml
+# API des articles
+## Initialisation de la configuration de la bdd
 
+- Initialiser docker mongoDB dans docker-compose.yml
 - initialisation du fichier de config mongodb
 
 ```sh
@@ -8,7 +10,7 @@ docker compose up
 docker-compose up
 ```
 
-Installer MongoDB extention de vscode.
+- Installer MongoDB extention de vscode.
 
 Connexion avec :
 mongodb://localhost:27017/myapp
