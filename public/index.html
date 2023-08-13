@@ -23,11 +23,11 @@
       </article>
       <article v-else>
         <h1>Créer un utilisateur</h1>
-        <form @submit.prevent="create">
+        <form @submit.prevent="create">tests/users.spec.js
           <input type="text" placeholder="Name" required v-model="newUser.name">
           <input type="text" placeholder="Email" required v-model="newUser.email">
           <input type="text" placeholder="Password" required v-model="newUser.password">
-          <button class="contrast">Créer</button>
+          <button type='submit' class="contrast">Créer</button>
         </form>
         <h1>Utilisateur existant</h1>
         <table>
@@ -108,6 +108,7 @@ createApp({
       })
     },
     async create() {
+      console.log("SubmitCreate");
       await axios.post('/api/users', this.newUser, {
           headers: {
             'x-access-token': this.userToken

@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+    mongodb:
+      image: mongo:5.0
+      environment: 
+        MONGO_INITBD_DATABASE: 'myapp'
+        MONGO_INITBD_ROOT_USERNAME: 'visiplus'
+        MONGO_INITBD_ROOT_PASSWORD: 'visiplus'
+      ports:
+        - '27017-27019:27017-27019'
+      volumes:
+        - ./mongodb-setup.js:/docker-entrypoint-initdb.d/mongodb-setup.js:ro
+        - mongo-data:/data/db:rw
+volumes:
+  mongo-data:
